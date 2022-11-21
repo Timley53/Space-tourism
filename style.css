@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;800&family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
 html {
   padding: 0;
@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Mukta", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -32,7 +32,7 @@ body {
 
 nav {
   position: fixed;
-  top: 2rem;
+  margin-top: 1rem;
   min-width: 100%;
   padding: 0;
   display: flex;
@@ -115,7 +115,7 @@ nav {
 
 /* homepage-content */
 .space-travel {
-  margin-top: 18rem;
+  margin-top: 15rem;
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -168,16 +168,18 @@ nav {
 }
 
 .circle:hover {
-  transition: all 1s;
+  transition: all 2s;
   animation-name: outline;
-  animation-duration: 2s;
-  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-delay: 0;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-direction: normal;
   animation-fill-mode: backwards;
 }
 @keyframes outline {
+  0% {
+    outline: 0rem solid rgba(255, 255, 255, 0.464);
+  }
   50% {
     outline: 5rem solid rgba(255, 255, 255, 0.464);
   }
@@ -193,22 +195,271 @@ nav {
   background-image: url("./images/background-destination-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.moons-distance {
+  display: flex;
+  justify-content: space-between;
+  width: 88%;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+.moon-pics {
+  width: 50%;
+  color: white;
+}
+.moon-pics img {
+  width: 65%;
+  text-align: center;
+}
+.moon-tabs {
+  width: 45%;
+  /* border: 1px solid red; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.tabs {
+  width: 100%;
+}
+.tabs button {
+  margin: 0.7rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.tabs button:hover {
+  border-bottom: 2px solid white;
+}
+.tabs .active {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.579);
+}
+.destination-tab {
+  width: 90%;
+  padding-left: 0.7rem;
+  /* text-align: left; */
+}
+.destination-tab h1 {
+  font-size: 13vh;
+  width: 80%;
+  margin: 0;
+  font-weight: 500;
+  text-align: left;
+}
+.destination-tab p {
+  margin: 2rem 0;
+  width: 90%;
+  /* padding-left: 0.7rem; */
+}
+.destination-tab .h-line {
+  width: 95%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.264);
+  border: none;
+}
+.avg-est {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.avg-est h4 {
+  font-weight: 600;
+  font-size: small;
+  opacity: 0.7;
+}
+.avg-est .span {
+  font-size: 3.5vh;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
 }
 
+/* ---------- */
+.crew-container {
+  background-image: url("./assets/crew/background-crew-desktop.jpg");
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+.engr-btn {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  margin-top: 8rem;
+}
+.engineers {
+  /* border: 1px solid white; */
+  padding: 0.5rem;
+  display: flex;
+  height: 100%;
+  color: white;
+  padding-top: 0.6rem;
+}
+.eng-description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 12rem; */
+}
+.eng-title {
+  font-size: 4vh;
+  font-weight: 100;
+  /* opacity: 0.6; */
+  color: rgb(181, 193, 203);
+  margin: 0.4rem 0;
+  margin-top: 2.5rem;
+}
+.eng-name {
+  font-size: 6vh;
+  font-weight: 100;
+  margin: 1.3rem 0;
+}
+.eng-desc {
+  width: 75%;
+}
+.eng-btn {
+  margin-top: 4rem;
+  /* position: absolute; */
+  margin-bottom: 21vh;
+  bottom: 0;
+}
+.eng-img {
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+}
+.eng-img img {
+  width: 370px;
+  position: absolute;
+  height: 80%;
+  right: 0.4rem;
+  bottom: 0;
+}
+.btn {
+  margin: 0.3rem;
+  padding: 0.7rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: burlywood;
+}
+.active-btn {
+  background-color: burlywood;
+}
+
+/* .tech-container{
+
+} */
+/* ========= */
+
+.tech-body {
+  background-image: url("./assets/technology/background-technology-desktop.jpg");
+}
+
+.tech-content {
+  /* border: 1px solid; */
+  color: white;
+  margin-top: 9rem;
+  width: 95%;
+}
+.launch-btn-img {
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+}
+.btn-launch {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 50%;
+  align-items: center;
+}
+.btn-tabs {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.launch-btn {
+  padding: 1.8rem;
+  margin: 1rem 0.8rem;
+  font-size: larger;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+}
+.launch-btn:hover {
+  background-color: white;
+  color: black;
+}
+.active-launc {
+  background-color: white;
+  color: black;
+}
+.launch {
+  width: 60%;
+}
+.launch .terminology {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: rgba(240, 248, 255, 0.467);
+}
+.launch h1 {
+  font-size: 6vh;
+  font-weight: 300;
+}
+.rocket-img {
+  width: 40%;
+}
+.rocket-img img {
+  width: 440px;
+}
 /*  */
+/* .dive {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 0.2rem solid white;
+  border-left: 0.2rem solid red;
+  animation-name: roller;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes roller {
+ 
+  100% {
+    transform: rotate(360deg);
+  }
+} */
 
 @media all and (min-width: 650px) and (max-width: 950px) {
   body {
-    height: 100vh;
+    height: auto;
   }
   .home-container {
     background-image: url("./images/background-home-tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
   }
   nav {
-    position: fixed;
-    top: 1rem;
+    position: static;
+    top: 0.5rem;
     min-width: 100%;
     padding: 0;
     display: flex;
@@ -273,13 +524,14 @@ nav {
 
   /* homepage-content */
   .space-travel {
-    margin-top: 14rem;
+    margin-top: 2rem;
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: white;
+    border-bottom: 1rem;
   }
   .space-content {
     width: 90%;
@@ -341,20 +593,299 @@ nav {
     animation-direction: normal;
     animation-fill-mode: backwards;
   }
+  /* destination------- */
+  .destination--container {
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .moons-distance {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .moon-pics {
+    width: 65%;
+    color: white;
+    text-align: center;
+  }
+  .moon-pics img {
+    width: 80%;
+    text-align: center;
+  }
+  .moon-tabs {
+    width: 70%;
+    /* border: 1px solid red; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabs {
+    width: 80%;
+    align-self: center;
+    text-align: center;
+  }
+  .tabs button {
+    margin: 0.7rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  .tabs button:hover {
+    border-bottom: 2px solid white;
+  }
+  .tabs .active {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.579);
+  }
+  .destination-tab {
+    width: 90%;
+    padding-left: 0.7rem;
+    /* text-align: left; */
+  }
+  .destination-tab h1 {
+    font-size: 13vh;
+    width: 90%;
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+  }
+  .destination-tab p {
+    margin: 2rem 0;
+    text-align: center;
+    width: 90%;
+    /* padding-left: 0.7rem; */
+  }
+  .destination-tab .h-line {
+    width: 85%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.264);
+    border: none;
+  }
+  .avg-est {
+    width: 90%;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  .avg-est h4 {
+    font-weight: 600;
+    font-size: small;
+    opacity: 0.7;
+  }
+  .avg-est .span {
+    font-size: 3.5vh;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  /* ---------- */
+  .crew-body {
+    height: 90vh;
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .crew-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-repeat: no-repeat;
+  }
+  .engr-btn {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    margin-top: 3rem;
+  }
+  .engineers {
+    margin-top: 1rem;
+    /* border: 1px solid white; */
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    color: white;
+    padding-top: 0.6rem;
+  }
+  .eng-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 12rem; */
+  }
+  .eng-title {
+    font-size: 4vh;
+    font-weight: 100;
+    color: rgb(181, 193, 203);
+    margin: 0.4rem 0;
+    margin-top: 1.5rem;
+  }
+  .eng-name {
+    font-size: 6vh;
+    font-weight: 100;
+    margin: 1.3rem 0;
+  }
+  .eng-desc {
+    width: 85%;
+    text-align: center;
+  }
+  .eng-btn {
+    width: 30%;
+    margin-left: -4rem;
+    margin-top: 0rem;
+    position: absolute;
+    margin-bottom: 10rem;
+    bottom: 0;
+    left: 0;
+    /* border: 1px solid white; */
+  }
+  .eng-img {
+    width: 80%;
+    height: 100%;
+    /* z-index: 1; */
+
+    text-align: center;
+    margin: 0;
+    margin-top: 1rem;
+  }
+  .eng-img img {
+    width: 300px;
+    position: static;
+    height: 330px;
+    right: 0.4rem;
+    bottom: 0;
+    margin: 0;
+  }
+  .btn {
+    margin: 0.3rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: burlywood;
+  }
+
+  /* ----- */
+
+  /* ========= */
+
+  .tech-body {
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .tech-content {
+    /* border: 1px solid white; */
+    color: white;
+    margin-top: 3rem;
+    width: 95%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .launch-btn-img {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+  }
+  .btn-launch {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+    /* border: 1px solid white; */
+  }
+  .btn-tabs {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .launch-btn {
+    padding: 1.8rem;
+    margin: 1rem 0.8rem;
+    font-size: larger;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+  }
+  .launch-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  .active-launc {
+    background-color: white;
+    color: black;
+  }
+  .launch {
+    width: 90%;
+  }
+  .launch .terminology {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 2rem;
+    color: rgba(240, 248, 255, 0.467);
+  }
+  .launch h1 {
+    font-size: 6vh;
+    font-weight: 300;
+  }
+  .rocket-img {
+    margin-top: 2rem;
+    width: 90%;
+  }
+  .rocket-img img {
+    width: 90%;
+    border-radius: 1rem;
+  }
 }
+/* 
+
+
+*/
 @media all and (max-width: 650px) {
   body {
     font-family: "Noto Sans", sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: auto;
     width: 100%;
     /* border: 1px solid red; */
   }
   .container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -364,18 +895,23 @@ nav {
   }
 
   .home-container {
-    background-image: url("./images/background-home-tablet.jpg");
+    background-image: url("./images/background-home-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 120vh;
   }
   nav {
     position: fixed;
+    margin-top: 0.8rem;
     top: 1rem;
     min-width: 95%;
     /* border: 1px solid green; */
+
     padding: 0.5rem 0rem;
     display: flex;
     justify-content: space-between;
+    background-color: rgba(100, 148, 237, 0.21);
+    border-radius: 0.7rem;
   }
 
   .logo-line {
@@ -396,7 +932,8 @@ nav {
     padding: 0.5rem;
     display: block;
     border: none;
-    z-index: 100;
+    z-index: 110;
+    cursor: pointer;
   }
   .menu-none {
     display: none;
@@ -414,7 +951,7 @@ nav {
     background-color: rgba(91, 103, 111, 0.763);
     backdrop-filter: blur(50px);
     min-width: auto;
-    width: 70%;
+    width: 60%;
 
     padding-left: 1rem;
     padding-top: 4rem;
@@ -437,6 +974,7 @@ nav {
     padding: 1.5rem 0;
     margin: 0 3%;
     position: relative;
+    z-index: 110;
   }
   .nav-list a:hover::after {
     content: "";
@@ -449,6 +987,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.514);
   }
   .nav-lists .nav-list a {
+    z-index: 110;
     background-color: transparent;
     padding: 1.5rem 0rem;
     text-decoration: none;
@@ -459,7 +998,7 @@ nav {
 
   /* homepage-content */
   .space-travel {
-    margin-top: 6rem;
+    margin-top: 8rem;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -499,12 +1038,13 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* margin-bottom: 1rem; */
   }
   .circle {
-    width: 17rem;
+    width: 15rem;
 
     background-color: white;
-    height: 17rem;
+    height: 15rem;
     color: black;
     text-align: center;
     display: flex;
@@ -515,5 +1055,302 @@ nav {
     padding: 2rem;
     font-size: large;
     cursor: pointer;
+  }
+
+  /* destination */
+
+  /* destination------- */
+  .destination--container {
+    background-image: url("./images/background-destination-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .moons-distance {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .moon-pics {
+    width: 95%;
+    color: white;
+    text-align: center;
+  }
+  .moon-pics img {
+    width: 80%;
+    text-align: center;
+  }
+  .moon-tabs {
+    width: 100%;
+    margin-top: 2rem;
+    /* border: 1px solid red; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabs {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .tabs button {
+    margin: 0.6rem;
+    width: 25%;
+    padding: 0.5rem;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  .tabs button:hover {
+    border-bottom: 2px solid white;
+  }
+  .tabs .active {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.579);
+  }
+  .destination-tab {
+    width: 90%;
+    padding-left: 0.7rem;
+    /* text-align: left; */
+  }
+  .destination-tab h1 {
+    font-size: 8vh;
+    width: 90%;
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .destination-tab p {
+    margin: 2rem 0;
+    width: 90%;
+    text-align: center;
+    padding: 0.6rem;
+    /* padding-left: 0.7rem; */
+  }
+  .destination-tab .h-line {
+    width: 90%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.264);
+    border: none;
+  }
+  .avg-est {
+    width: 90%;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  .avg-est h4 {
+    font-weight: 600;
+    font-size: small;
+    opacity: 0.7;
+  }
+  .avg-est .span {
+    font-size: 3vh;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  /* ---------- */
+
+  .crew-body {
+    width: 100%;
+    height: auto;
+    background-image: url("./assets/crew/background-crew-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 5px;
+    padding: 0;
+    margin: 0;
+    z-index: -2;
+  }
+  .crew-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    border: 1px solid white;
+    z-index: 0;
+  }
+  .engr-btn {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+    z-index: -1;
+  }
+  .engineers {
+    margin-top: 0rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    color: white;
+    padding-top: 0.6rem;
+    width: 80%;
+    z-index: -1;
+  }
+  .eng-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 12rem; */
+  }
+  .eng-title {
+    font-size: 3vh;
+    font-weight: 100;
+    color: rgb(181, 193, 203);
+    margin: 0.4rem 0;
+    margin-top: 2.5rem;
+  }
+  .eng-name {
+    font-size: 5vh;
+    font-weight: 100;
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+  }
+  .eng-desc {
+    width: 95%;
+    text-align: center;
+  }
+  .eng-btn {
+    width: 60%;
+    height: 10%;
+    margin-left: 0;
+    margin-top: 0rem;
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 8rem;
+    left: -4rem;
+    transform: rotate(90deg);
+    /* border: 1px solid white; */
+
+    z-index: 10;
+  }
+  .eng-img {
+    width: 80%;
+    height: auto;
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+    margin-top: 3rem;
+    margin-left: 6rem;
+
+    /* border: 1px solid white; */
+  }
+  .eng-img img {
+    width: 200px;
+    /* position: absolute; */
+    position: static;
+    right: 0;
+    height: 270px;
+    bottom: 0.5rem;
+    margin: 0;
+  }
+  .btn {
+    margin: 0.3rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: burlywood;
+  }
+  .active-btn {
+    background-color: burlywood;
+  }
+  /* ========= */
+  .tech-body {
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+  }
+
+  .tech-content {
+    /* border: 1px solid; */
+    color: white;
+    margin-top: 7rem;
+    width: 90%;
+    text-align: center;
+  }
+  .launch-btn-img {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-launch {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+  .btn-tabs {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .launch-btn {
+    padding: 1.9rem;
+    margin: 0.5rem 0.8rem;
+    font-size: larger;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+  }
+  .launch-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  .active-launc {
+    background-color: white;
+    color: black;
+  }
+  .launch {
+    width: 90%;
+  }
+  #terminology {
+    font-size: 1.1rem;
+    font-weight: 200;
+    /* z-index: 1; */
+    color: rgba(240, 248, 255, 0.467);
+  }
+  .launch h1 {
+    font-size: 5vh;
+    font-weight: 300;
+  }
+  .rocket-img {
+    width: 90%;
+  }
+  .rocket-img img {
+    width: 90%;
+    border-radius: 1rem;
   }
 }
