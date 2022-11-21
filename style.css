@@ -948,7 +948,7 @@ nav {
   }
 
   .nav-lists {
-    background-color: rgba(91, 103, 111, 0.763);
+    background-color: rgb(91, 103, 111);
     backdrop-filter: blur(50px);
     min-width: auto;
     width: 60%;
